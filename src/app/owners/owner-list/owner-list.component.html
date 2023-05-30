@@ -19,7 +19,7 @@
         </div>
     </form>
     <br>
-    <div class="table-responsive" id="ownersTable" *ngIf="owners">
+    <div class="table-responsive" id="ownersTable">
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -43,7 +43,7 @@
                 </tr>
                 </td>
                 <td>
-                    <button (click)="viewOwner(owner.id)" class="btn btn-success" >View Owner</button>
+                    <button (click)="viewOwner(owner.id)" class="btn btn-success">View Owner</button>
                 </td>
                 </tr>
             </tbody>

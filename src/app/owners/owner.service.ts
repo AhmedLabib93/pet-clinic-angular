@@ -30,4 +30,8 @@ export class OwnerService {
   updateOwner(id: number, owner: Owner): Observable<Object> {
     return this.http.put(`${this.url}/${id}`, owner);
   }
+
+  addNewOwner(owner: Owner): Observable<Object> {
+    return this.http.post(`${this.url}`, owner);
+  }
 }

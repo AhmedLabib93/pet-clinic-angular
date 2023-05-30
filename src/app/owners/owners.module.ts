@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
     OwnerAddComponent,
     OwnerDetailComponent,
     OwnerListComponent,
-    OwnerUpdateComponent
+    OwnerUpdateComponent,
   ],
   imports: [
     CommonModule,

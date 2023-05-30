@@ -32,7 +32,19 @@
     <h3>Pets and Visits</h3>
     <div>
         <table>
-
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Birth Date</th>
+                    <th>Type</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pet of owner.pets">
+                    <app-pet-list [pet]="pet"></app-pet-list>
+                </tr>
+            </tbody>
         </table>
     </div>
 </div>

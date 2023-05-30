@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Pet } from '../pet';
+import { PetService } from '../pet.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pet-list',
@@ -7,4 +10,18 @@ import { Component } from '@angular/core';
 })
 export class PetListComponent {
 
+  @Input() pet: Pet = new Pet();
+
+  constructor(private petService: PetService,
+    private router: Router) {
+
+  }
+
+  editPet() {
+
+  }
+
+  addVisit() {
+
+  }
 }

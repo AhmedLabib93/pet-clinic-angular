@@ -1,1 +1,16 @@
-<p>pet-list works!</p>
+<div class="table-responsive" id="ownersTable">
+    <table class="table-striped">
+        <tr>
+            <td valign="top">
+                <dl>Name: {{pet.name}}</dl>
+
+                <dl>Birth Date: {{pet.birthDate}}</dl>
+                <dl>Type {{pet.type}}</dl>
+            </td>
+            <td valign="center">
+                <button (click)="editPet()" class="btn btn-info">Edit Pet</button>
+                <button (click)="addVisit()" class="btn btn-success">Add Visit</button>
+            </td>
+        </tr>
+    </table>
+</div>
