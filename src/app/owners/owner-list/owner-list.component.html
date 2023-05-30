@@ -1,1 +1,52 @@
-<p>owner-list works!</p>
+<div class="container-fluid">
+    <h2> Owners</h2>
+
+    <form method="get" class="form-horizontal" id="search-owner-form">
+        <div class="form-group">
+            <div class="control-group" id="lastNameGroup">
+                <h5>LastName</h5>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" size="30" maxLength="50" id="lastName"
+                        [(ngModel)]="lastName" name="lastName" value="">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <div class="col-sm-offset-2" col=-sm-10>
+                <button type="submit" class="btn btn-info" (click)="getOwnersByLastName()">Find Owner</button>
+            </div>
+        </div>
+    </form>
+    <br>
+    <div class="table-responsive" id="ownersTable" *ngIf="owners">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Phone</th>
+                    <th>Pets</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let owner of owners">
+                    <td>{{owner.firstName}} {{owner.lastName}}</td>
+                    <td>{{owner.address}}</td>
+                    <td>{{owner.city}}</td>
+                    <td>{{owner.phone}}</td>
+                    <td>
+                <tr *ngFor="let pet of owner.pets">
+                    {{pet.name}}
+                </tr>
+                </td>
+                <td>
+                    <button (click)="viewOwner(owner.id)" class="btn btn-success" >View Owner</button>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

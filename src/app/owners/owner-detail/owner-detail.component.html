@@ -1,1 +1,38 @@
-<p>owner-detail works!</p>
+<div class="container-fluid">
+    <h3>Owner Information</h3>
+    <div class="table-responsive" id="ownerDetailTable">
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <th>Name</th>
+                    <td>{{owner.firstName}} {{owner.lastName}}</td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td>{{owner.address}} {{owner.lastName}}</td>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <td>{{owner.city}}</td>
+                </tr>
+                <tr>
+                    <th>Phone</th>
+                    <td>{{owner.phone}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <button (click)="addPet()" class="btn btn-info"> Add Pet </button>
+        <button (click)="editOwner()" class="btn btn-success"> Edit Owner </button>
+        <button (click)="back()" class="btn btn-danger"> Back </button>
+    </div>
+    <br>
+    <h3>Pets and Visits</h3>
+    <div>
+        <table>
+
+        </table>
+    </div>
+</div>
